@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Portal2D", "Portal2D.csproj", "{B9DD45D2-5066-5316-5108-B15B0EBA2D67}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Portal2D.Plugins", "Portal2D.Plugins.csproj", "{5B9E885F-0E9C-067C-5952-EA40BD078D91}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Portal2D.Editor.Plugins", "Portal2D.Editor.Plugins.csproj", "{FBD1CD13-EF62-063D-2215-31C72503DECA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B9DD45D2-5066-5316-5108-B15B0EBA2D67}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B9DD45D2-5066-5316-5108-B15B0EBA2D67}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B9DD45D2-5066-5316-5108-B15B0EBA2D67}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B9DD45D2-5066-5316-5108-B15B0EBA2D67}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5B9E885F-0E9C-067C-5952-EA40BD078D91}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5B9E885F-0E9C-067C-5952-EA40BD078D91}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5B9E885F-0E9C-067C-5952-EA40BD078D91}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5B9E885F-0E9C-067C-5952-EA40BD078D91}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FBD1CD13-EF62-063D-2215-31C72503DECA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FBD1CD13-EF62-063D-2215-31C72503DECA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FBD1CD13-EF62-063D-2215-31C72503DECA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FBD1CD13-EF62-063D-2215-31C72503DECA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
