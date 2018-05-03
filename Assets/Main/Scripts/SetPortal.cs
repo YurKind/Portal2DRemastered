@@ -17,7 +17,7 @@ public class SetPortal : MonoBehaviour
     {
         GameObject walls = GameObject.Find("Environment");
 
-        if (Input.GetMouseButtonDown(RIGHT_MOUSE_BUTTON) && IsPortalAbleToSet(walls))
+        if (Input.GetMouseButtonDown(RIGHT_MOUSE_BUTTON) && IsPortalAbleToSet(walls, bluePortal))
         {
             if (redPortal == null)
             {
@@ -32,7 +32,7 @@ public class SetPortal : MonoBehaviour
             redPortal.transform.position = spawnPosition;
         }
 
-        if (Input.GetMouseButtonDown(LEFT_MOUSE_BUTTON) && IsPortalAbleToSet(walls))
+        if (Input.GetMouseButtonDown(LEFT_MOUSE_BUTTON) && IsPortalAbleToSet(walls, redPortal))
         {
             if (bluePortal == null)
             {
@@ -48,8 +48,11 @@ public class SetPortal : MonoBehaviour
         }
     }
 
-    private bool IsPortalAbleToSet(GameObject walls)
+    private bool IsPortalAbleToSet(GameObject walls, GameObject portal)
     {
+        bool wallsCondition = true;
+        bool portalCondition = true;
+
         const float OFFSET_X = 0.75f;
         const float OFFSET_Y = 1.15f;
 
@@ -68,10 +71,19 @@ public class SetPortal : MonoBehaviour
             {
                 if (collider.OverlapPoint(mPos))
                 {
-                    return false;
+                    wallsCondition = false;
+                    break;
                 }
             }
+
+            if (!wallsCondition) break;
         }
-        return true;
+
+        if (portal != null)
+        {
+            portalCondition = !portal.GetComponent<Collider2D>().OverlapPoint(mousePosition);
+        }
+
+        return wallsCondition && portalCondition;
     }
 }
