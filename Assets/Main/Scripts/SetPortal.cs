@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 
 public class SetPortal : MonoBehaviour
@@ -7,13 +6,13 @@ public class SetPortal : MonoBehaviour
     private const int LEFT_MOUSE_BUTTON = 0;
     private const int RIGHT_MOUSE_BUTTON = 1;
 
-    GameObject redPortal;
-    GameObject bluePortal;
+    private GameObject redPortal;
+    private GameObject bluePortal;
 
     public Sprite redPortalSprite;
     public Sprite bluePortalSprite;
 
-    void Update()
+    private void Update()
     {
         GameObject walls = GameObject.Find("Environment");
 
@@ -23,6 +22,7 @@ public class SetPortal : MonoBehaviour
             {
                 redPortal = new GameObject("RedPortal");
                 redPortal.AddComponent<SpriteRenderer>().sprite = redPortalSprite;
+                redPortal.GetComponent<SpriteRenderer>().sortingLayerName = "Portals";
                 redPortal.AddComponent<CapsuleCollider2D>().isTrigger = true;
             }
 
@@ -38,6 +38,7 @@ public class SetPortal : MonoBehaviour
             {
                 bluePortal = new GameObject("BluePortal");
                 bluePortal.AddComponent<SpriteRenderer>().sprite = bluePortalSprite;
+                bluePortal.GetComponent<SpriteRenderer>().sortingLayerName = "Portals";
                 bluePortal.AddComponent<CapsuleCollider2D>().isTrigger = true;
             }
 
@@ -53,15 +54,15 @@ public class SetPortal : MonoBehaviour
         bool wallsCondition = true;
         bool portalCondition = true;
 
-        const float OFFSET_X = 0.75f;
-        const float OFFSET_Y = 1.15f;
+        const float offsetX = 0.75f;
+        const float offsetY = 1.15f;
 
         Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         var mPositions = new List<Vector2>();
-        mPositions.Add(new Vector2(mousePosition.x - OFFSET_X, mousePosition.y + OFFSET_Y));
-        mPositions.Add(new Vector2(mousePosition.x + OFFSET_X, mousePosition.y + OFFSET_Y));
-        mPositions.Add(new Vector2(mousePosition.x - OFFSET_X, mousePosition.y - OFFSET_Y));
-        mPositions.Add(new Vector2(mousePosition.x + OFFSET_X, mousePosition.y - OFFSET_Y));
+        mPositions.Add(new Vector2(mousePosition.x - offsetX, mousePosition.y + offsetY));
+        mPositions.Add(new Vector2(mousePosition.x + offsetX, mousePosition.y + offsetY));
+        mPositions.Add(new Vector2(mousePosition.x - offsetX, mousePosition.y - offsetY));
+        mPositions.Add(new Vector2(mousePosition.x + offsetX, mousePosition.y - offsetY));
         mPositions.Add(mousePosition);
 
         var colliders = walls.GetComponentsInChildren<Collider2D>();

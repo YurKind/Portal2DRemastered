@@ -1,15 +1,12 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class LookAtMouse : MonoBehaviour {
-
-    void Update()
+    private void Update()
     {
         FaceMouse();
     }
 
-    void FaceMouse()
+    private void FaceMouse()
     {
         Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 

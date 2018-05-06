@@ -1,11 +1,9 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class GrabObject : MonoBehaviour
 {
     public bool grabbed;
-    RaycastHit2D hit;
+    private RaycastHit2D hit;
     public float distance = 2f;
     public Transform holdpoint;
     public LayerMask notgrabbed;
@@ -20,7 +18,7 @@ public class GrabObject : MonoBehaviour
         player = GameObject.Find("Player");
     }
 
-    void Update()
+    private void Update()
     {
         if (Input.GetKeyDown(KeyCode.E))
         {

@@ -1,30 +1,29 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class PushTheButton : MonoBehaviour
 {
     public Sprite buttonOn;
     public Sprite buttonOff;
-    public Sprite doorOpen;
-    public Sprite doorClosed;
 
-    SpriteRenderer buttonRenderer = null;
-    SpriteRenderer doorRenderer = null;
+    private SpriteRenderer buttonRenderer;
 
-    GameObject player = null;
-    Collider2D playerCollider = null;
-    Collider2D cubeCollider = null;
-    GameObject door = null;
-    GameObject cube = null;
+    private GameObject player;
+    private GameObject cube;
+    private GameObject door;
 
-    void Start()
+    private Collider2D playerCollider;
+    private Collider2D cubeCollider;
+    private Collider2D buttonCollider;
+
+    private void Start()
     {
         player = GameObject.Find("Player");
         cube = GameObject.Find("Cube");
         door = GameObject.Find("Door");
+
         playerCollider = player.GetComponent<Collider2D>();
         cubeCollider = cube.GetComponent<Collider2D>();
+        buttonCollider = transform.GetComponent<Collider2D>();
 
         if (gameObject.GetComponent<SpriteRenderer>() == null)
         {
@@ -34,29 +33,19 @@ public class PushTheButton : MonoBehaviour
         {
             buttonRenderer = gameObject.GetComponent<SpriteRenderer>();
         }
-
-        if (door.GetComponent<SpriteRenderer>() == null)
-        {
-            doorRenderer = door.AddComponent<SpriteRenderer>();
-        }
-        else
-        {
-            doorRenderer = door.GetComponent<SpriteRenderer>();
-        }
     }
 
-    void Update()
+    private void Update()
     {
-        var buttonCollider = transform.GetComponent<PolygonCollider2D>();
         if (buttonCollider.IsTouching(playerCollider) || buttonCollider.IsTouching(cubeCollider))
         {
             buttonRenderer.sprite = buttonOn;
-            doorRenderer.sprite = doorOpen;
+            door.GetComponent<DoorBehaviour>().isOpened = true;
         }
         else
         {
             buttonRenderer.sprite = buttonOff;
-            doorRenderer.sprite = doorClosed;
+            door.GetComponent<DoorBehaviour>().isOpened = false;
         }
     }
 }

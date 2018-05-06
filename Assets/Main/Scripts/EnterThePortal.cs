@@ -1,11 +1,7 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityStandardAssets.CrossPlatformInput;
+﻿using UnityEngine;
 
 public class EnterThePortal : MonoBehaviour {
-
-	void Update () {
+    private void Update () {
 
         if (Input.GetButtonDown("EnterThePortal"))
         {

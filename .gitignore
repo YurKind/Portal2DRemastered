@@ -1,2 +1,5 @@
 .vs
 *.csproj
+**/Temp
+**/metadata
+**/ShaderCache
