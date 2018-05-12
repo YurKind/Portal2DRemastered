@@ -1,11 +1,10 @@
-﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Portal2DRemastered", "Assembly-CSharp.csproj", "{53F5C6C4-7E63-C8C8-6F37-4B25EFF14534}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "Assembly-CSharp.csproj", "{53F5C6C4-7E63-C8C8-6F37-4B25EFF14534}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Portal2DRemastered", "Assembly-CSharp-firstpass.csproj", "{6A19ED93-F6C8-6F3C-3EC2-2C7D6AA18BCD}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp-firstpass", "Assembly-CSharp-firstpass.csproj", "{6A19ED93-F6C8-6F3C-3EC2-2C7D6AA18BCD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Portal2DRemastered", "Assembly-CSharp-Editor-firstpass.csproj", "{C59A1914-5A48-363F-E02B-A4B073CF8332}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp-Editor-firstpass", "Assembly-CSharp-Editor-firstpass.csproj", "{C59A1914-5A48-363F-E02B-A4B073CF8332}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
