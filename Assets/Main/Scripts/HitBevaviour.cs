@@ -1,13 +1,16 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class HitBevaviour : MonoBehaviour
 {
     public int HP = 100;
-    public float knockBackDistance = 0.1f;
-
+    public float knockBackDistance = 0.05f;
+    public Text health;
+    
     void Update()
     {
+        health.text = "Health: " + HP;
         if (HP < 1)
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);

@@ -15,6 +15,8 @@
           <e p="HitBevaviour.cs" t="Include" />
           <e p="ITurretBehaviour.cs" t="Include" />
           <e p="LookAtMouse.cs" t="Include" />
+          <e p="Platformer2DUserControl.cs" t="Include" />
+          <e p="PlatformerCharacter2D.cs" t="Include" />
           <e p="PushTheButton.cs" t="Include" />
           <e p="SetPortal.cs" t="Include" />
           <e p="ShootingPointBehaviour.cs" t="Include" />
@@ -47,8 +49,6 @@
           <e p="Scripts" t="Include">
             <e p="Camera2DFollow.cs" t="Include" />
             <e p="CameraFollow.cs" t="Include" />
-            <e p="Platformer2DUserControl.cs" t="Include" />
-            <e p="PlatformerCharacter2D.cs" t="Include" />
             <e p="Restarter.cs" t="Include" />
           </e>
         </e>
