@@ -9,8 +9,17 @@ public class SetPortal : MonoBehaviour
     private GameObject redPortal;
     private GameObject bluePortal;
 
+    private AudioSource audioSource;
+    
     public Sprite redPortalSprite;
     public Sprite bluePortalSprite;
+    public AudioClip blueSound;
+    public AudioClip redSound;
+
+    private void Awake()
+    {
+        audioSource = GetComponent<AudioSource>();
+    }
 
     private void Update()
     {
@@ -28,6 +37,8 @@ public class SetPortal : MonoBehaviour
 
             Vector3 spawnPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             spawnPosition.z = 0.0f;
+            
+            audioSource.PlayOneShot(redSound);
 
             redPortal.transform.position = spawnPosition;
         }
@@ -44,6 +55,8 @@ public class SetPortal : MonoBehaviour
 
             Vector3 spawnPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             spawnPosition.z = 0.0f;
+            
+            audioSource.PlayOneShot(blueSound);
 
             bluePortal.transform.position = spawnPosition;
         }

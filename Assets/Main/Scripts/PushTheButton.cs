@@ -37,15 +37,16 @@ public class PushTheButton : MonoBehaviour
 
     private void Update()
     {
+        var doorBehaviour = door.GetComponent<DoorBehaviour>();
         if (buttonCollider.IsTouching(playerCollider) || buttonCollider.IsTouching(cubeCollider))
         {
             buttonRenderer.sprite = buttonOn;
-            door.GetComponent<DoorBehaviour>().isOpened = true;
+            if (!doorBehaviour.isOpened) doorBehaviour.OpenDoor();
         }
         else
         {
             buttonRenderer.sprite = buttonOff;
-            door.GetComponent<DoorBehaviour>().isOpened = false;
+            if (doorBehaviour.isOpened) doorBehaviour.CloseDoor();
         }
     }
 }

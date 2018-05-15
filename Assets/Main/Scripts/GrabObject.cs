@@ -1,22 +1,19 @@
-﻿using UnityEngine;
+﻿using System.Linq;
+using Main.Scripts;
+using UnityEngine;
 
 public class GrabObject : MonoBehaviour
 {
     public bool grabbed;
     private RaycastHit2D hit;
-    public Transform holdpoint;
     public LayerMask notgrabbed;
 
-    private Collider2D cubeCollider;
-    private Collider2D turretCollider;
     private GameObject player;
     private Collider2D holdpointCollider;
     private GameObject grabbedObject;
 
     private void Start()
     {
-        cubeCollider = GameObject.Find("Cube").GetComponent<Collider2D>();
-        turretCollider = GameObject.Find("Turret").GetComponent<Collider2D>();
         player = GameObject.Find("Player");
         holdpointCollider = gameObject.GetComponent<CircleCollider2D>();
     }
@@ -25,40 +22,31 @@ public class GrabObject : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.E))
         {
-            var isTouchingCube = cubeCollider.IsTouching(holdpointCollider);
-            var isTouchingTurret = turretCollider.IsTouching(holdpointCollider);
-
-            if (!grabbed)
+            if (grabbedObject != null)
             {
-                if (isTouchingCube || isTouchingTurret)
-                {
-                    grabbed = true;
-                    holdpointCollider.isTrigger = false;
-                    if (isTouchingCube)
-                    {
-                        grabbedObject = cubeCollider.gameObject;
-                        cubeCollider.isTrigger = true;
-                    }
-                    else
-                    {
-                        grabbedObject = turretCollider.gameObject;
-                        turretCollider.isTrigger = true;
-                    }
-                }
+                grabbedObject.GetComponent<IGrabbableAndThrowable>().Throw(player.GetComponent<Rigidbody2D>().velocity);
+                grabbedObject = null;
             }
-            else if (!Physics2D.OverlapPoint(holdpoint.position, notgrabbed))
+            else
             {
-                grabbed = false;
-                holdpointCollider.isTrigger = true;
+                var grabbableCollider = Physics2D.OverlapCircleAll(transform.position, 1f).FirstOrDefault(col =>
+                    col.gameObject.GetComponent<IGrabbableAndThrowable>() != null
+                );
 
-                grabbedObject.GetComponent<Collider2D>().isTrigger = false;
-                grabbedObject.GetComponent<Rigidbody2D>().velocity = player.GetComponent<Rigidbody2D>().velocity;
+                if (grabbableCollider == null) return;
+
+                grabbedObject = grabbableCollider.gameObject;
+                grabbedObject.GetComponent<IGrabbableAndThrowable>().Grab(gameObject);
             }
-        }
 
-        if (grabbed)
-        {
-            grabbedObject.transform.position = holdpoint.position;
+//            if (!Physics2D.OverlapPoint(transform.position, notgrabbed))
+               //            {
+               //                grabbed = false;
+               //                holdpointCollider.isTrigger = true;
+               //
+               //                grabbedObject.GetComponent<Collider2D>().isTrigger = false;
+               //                grabbedObject.GetComponent<Rigidbody2D>().velocity = player.GetComponent<Rigidbody2D>().velocity;
+               //            }
         }
     }
 }
