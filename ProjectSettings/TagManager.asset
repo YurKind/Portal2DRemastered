@@ -6,6 +6,9 @@ TagManager:
   tags:
   - grabbable
   - Fire
+  - Wall
+  - RedPortal
+  - BluePortal
   layers:
   - Default
   - TransparentFX
