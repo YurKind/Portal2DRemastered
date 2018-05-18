@@ -9,6 +9,7 @@ TagManager:
   - Wall
   - RedPortal
   - BluePortal
+  - BulletProof
   layers:
   - Default
   - TransparentFX

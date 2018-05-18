@@ -27,12 +27,4 @@ public class CubeBehaviour : GrabbableObject
 			}
 		}
 	}
-
-	private void Update()
-	{
-		if (grabbed)
-		{
-			transform.position = hold.transform.position;
-		}
-	}
 }

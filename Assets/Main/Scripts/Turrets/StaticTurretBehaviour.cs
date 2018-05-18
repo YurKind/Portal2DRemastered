@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using UnityEngine;
 
 public class StaticTurretBehaviour : GrabbableObject, ITurretBehaviour
@@ -23,6 +24,8 @@ public class StaticTurretBehaviour : GrabbableObject, ITurretBehaviour
 
     public void Update()
     {
+        base.Update();
+        
         if (ShouldShoot())
         {
             isShooting = true;
@@ -34,11 +37,6 @@ public class StaticTurretBehaviour : GrabbableObject, ITurretBehaviour
         }
 
         laser.GetComponent<SpriteRenderer>().sprite = IsGrounded() ? laserSprite : null;
-
-        if (grabbed)
-        {
-            transform.position = hold.transform.position;
-        }
     }
 
     public bool IsShooting()
@@ -57,10 +55,19 @@ public class StaticTurretBehaviour : GrabbableObject, ITurretBehaviour
         var startPosition = startShootingPoint.transform.position;
         var endPosition = endShootingPoint.transform.position;
 
-        bool playerInSight = Physics2D.Raycast(startPosition, endPosition - startPosition,
-                                 Vector2.Distance(startPosition, endPosition)).collider ==
-                             player.GetComponent<PolygonCollider2D>();
-        return playerInSight && IsGrounded();
+        var playerCollider = player.GetComponent<PolygonCollider2D>();
+        var test = Physics2D.RaycastAll(startPosition, endPosition - startPosition,
+            Vector2.Distance(startPosition, endPosition));
+        var collider2Ds = Physics2D.RaycastAll(startPosition, endPosition - startPosition,
+            Vector2.Distance(startPosition, endPosition)).Select(hit => hit.collider).ToList();
+        var rayCastHits = collider2Ds;
+        var firstWallOrBulletProof = rayCastHits.FirstOrDefault(col => col.CompareTag("BulletProof") || col.CompareTag("Wall"));
+
+        bool playerInSight = firstWallOrBulletProof != null && rayCastHits.IndexOf(playerCollider) != -1 &&
+                             rayCastHits.IndexOf(playerCollider) < rayCastHits.IndexOf(firstWallOrBulletProof) ||
+                             firstWallOrBulletProof == null && rayCastHits.IndexOf(playerCollider) != -1;
+
+        return playerInSight && IsGrounded();    
     }
 
     private bool IsGrounded()
