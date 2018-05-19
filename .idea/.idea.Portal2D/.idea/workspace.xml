@@ -3,52 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="b4c92ebf-bd45-4b70-9f68-0aeb403b3537" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Portal2D/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Portal2D/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Main/Scripts/Env/CubeBehaviour.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Main/Scripts/Env/CubeBehaviour.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Main/Scripts/Env/CubeSpawnerBehaviour.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Main/Scripts/Env/CubeSpawnerBehaviour.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Main/Scripts/Env/GrabbableObject.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Main/Scripts/Env/GrabbableObject.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Main/Scripts/Player/LookAtMouse.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Main/Scripts/Player/LookAtMouse.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Main/Scripts/Turrets/StaticTurretBehaviour.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Main/Scripts/Turrets/StaticTurretBehaviour.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Main/resources/Environment/floor_back.psd.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Main/resources/Environment/floor_back.psd.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Main/resources/Prefabs/Cubes.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Main/resources/Prefabs/Cubes.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Main/resources/Prefabs/Cubes.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Main/resources/Prefabs/Cubes.prefab.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Main/resources/Prefabs/Door.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Main/resources/Prefabs/Door.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Main/resources/Prefabs/Door.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Main/resources/Prefabs/Door.prefab.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Main/resources/Prefabs/Environment.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Main/resources/Prefabs/Environment.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Main/resources/Prefabs/Environment.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Main/resources/Prefabs/Environment.prefab.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Main/resources/Prefabs/TurretLeft.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Main/resources/Prefabs/TurretLeft.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Main/resources/Prefabs/TurretLeft.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Main/resources/Prefabs/TurretLeft.prefab.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Main/resources/Prefabs/TurretRight.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Main/resources/Prefabs/TurretRight.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Main/resources/Prefabs/TurretRight.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Main/resources/Prefabs/TurretRight.prefab.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level1.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level4.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level4.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/AnnotationManager" beforeDir="false" afterPath="$PROJECT_DIR$/Library/AnnotationManager" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/CurrentMaximizeLayout.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/Library/CurrentMaximizeLayout.dwlt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp.dll.mdb" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp.dll.mdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/assetDatabase3" beforeDir="false" afterPath="$PROJECT_DIR$/Library/assetDatabase3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/metadata/00/00000000000000003000000000000000" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/00/00000000000000003000000000000000" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/metadata/05/05740ce156f6b284692488b07797c94b" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/05/05740ce156f6b284692488b07797c94b" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/metadata/17/17ec61f01483c404cb68fae590ef70ec" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/17/17ec61f01483c404cb68fae590ef70ec" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/metadata/34/3456ffb2251d1ad4da9b88045c7028e9" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/34/3456ffb2251d1ad4da9b88045c7028e9" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/metadata/34/3456ffb2251d1ad4da9b88045c7028e9.info" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/34/3456ffb2251d1ad4da9b88045c7028e9.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/metadata/3e/3ed92e518cc12f1469a3a8dc30937f79" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/3e/3ed92e518cc12f1469a3a8dc30937f79" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/metadata/3e/3ee9c60b9ac711842bd482e25eeb69cc" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/3e/3ee9c60b9ac711842bd482e25eeb69cc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/metadata/48/4862f5093a672c94c82b4d38306299e5" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/48/4862f5093a672c94c82b4d38306299e5" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/metadata/48/4862f5093a672c94c82b4d38306299e5.info" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/48/4862f5093a672c94c82b4d38306299e5.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/metadata/55/553356bec7b608b4299e868a89ac5d40" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/55/553356bec7b608b4299e868a89ac5d40" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/metadata/b5/b52bacd1f7d230c49bfeffcd02c2d9f6" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/b5/b52bacd1f7d230c49bfeffcd02c2d9f6" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/metadata/bb/bbdcf72c5b025c4499cbcdabfd16bacc" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/bb/bbdcf72c5b025c4499cbcdabfd16bacc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/metadata/be/be6a46a60cc14474497d64f32c777c17" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/be/be6a46a60cc14474497d64f32c777c17" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/metadata/bf/bffff6382294a9641aa8b2c46bfcdd99" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/bf/bffff6382294a9641aa8b2c46bfcdd99" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/metadata/c2/c2419711e7e66db4a99ee1fc955b5c38" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/c2/c2419711e7e66db4a99ee1fc955b5c38" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/metadata/d0/d0eb259cb8df0514c973176900bf8fdd" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/d0/d0eb259cb8df0514c973176900bf8fdd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/metadata/dd/dd353a4038ed6ad42a2b2e6b6d88eb18" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/dd/dd353a4038ed6ad42a2b2e6b6d88eb18" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/metadata/e2/e29f67832275895438de9011efd1c1d3" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/e2/e29f67832275895438de9011efd1c1d3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/metadata/f7/f7145fd7b34f9304d98fb2d3e2af9be3" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/f7/f7145fd7b34f9304d98fb2d3e2af9be3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/CrashedAssetImports.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/shadercompiler-UnityShaderCompiler.exe0.log" beforeDir="false" afterPath="$PROJECT_DIR$/Library/shadercompiler-UnityShaderCompiler.exe0.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Portal2D.sln.DotSettings.user" beforeDir="false" afterPath="$PROJECT_DIR$/Portal2D.sln.DotSettings.user" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -430,12 +386,12 @@
       <workItem from="1526192689214" duration="13822000" />
       <workItem from="1526367795036" duration="13027000" />
       <workItem from="1526449644124" duration="28778000" />
-      <workItem from="1526664113188" duration="16639000" />
+      <workItem from="1526664113188" duration="17348000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="72266000" />
+    <option name="totallyTimeSpent" value="72975000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -448,7 +404,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="right" id="Errors In Solution" order="3" />
@@ -463,7 +418,7 @@
       <window_info anchor="bottom" id="Unity" order="7" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.4" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="NuGet" order="7" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
