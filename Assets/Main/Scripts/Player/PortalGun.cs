@@ -5,7 +5,7 @@ using System.Runtime.Remoting.Messaging;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class SetPortal : MonoBehaviour
+public class PortalGun : MonoBehaviour
 {
     private enum Portal
     {

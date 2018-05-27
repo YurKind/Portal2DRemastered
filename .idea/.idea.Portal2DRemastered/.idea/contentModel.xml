@@ -1,23 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\yurok_e\.Rider2018.1\system\resharper-host\local\Transient\ReSharperHost\v12\SolutionCaches\_Portal2DRemastered.-1769188423.00" t="ExcludeRecursive" />
-    <e p="D:\code\C#\Portal2D\Portal2D" t="IncludeRecursive">
+    <e p="C:\Users\Maxim\.Rider2018.1\system\resharper-host\local\Transient\ReSharperHost\v12\SolutionCaches\_Portal2DRemastered.659336366.00" t="ExcludeRecursive" />
+    <e p="C:\Users\Maxim\Desktop\code\Portal2DRemastered" t="IncludeRecursive">
       <e p="Assembly-CSharp-Editor-firstpass.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp-firstpass.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets\Main" t="Include">
         <e p="Scripts" t="Include">
-          <e p="DoorBehaviour.cs" t="Include" />
-          <e p="EnterThePortal.cs" t="Include" />
-          <e p="GrabObject.cs" t="Include" />
-          <e p="ITurretBehaviour.cs" t="Include" />
-          <e p="LookAtMouse.cs" t="Include" />
-          <e p="PushTheButton.cs" t="Include" />
-          <e p="SetPortal.cs" t="Include" />
-          <e p="ShootingPointBehaviour.cs" t="Include" />
-          <e p="StaticTurretBehaviour.cs" t="Include" />
-          <e p="TurnPlayerToMouse.cs" t="Include" />
+          <e p="Env" t="Include">
+            <e p="CubeBehaviour.cs" t="Include" />
+            <e p="CubeSpawnerBehaviour.cs" t="Include" />
+            <e p="DoorBehaviour.cs" t="Include" />
+            <e p="GrabbableObject.cs" t="Include" />
+            <e p="IGrabbableAndThrowable.cs" t="Include" />
+            <e p="PushTheButton.cs" t="Include" />
+            <e p="StandButtonBehaviour.cs" t="Include" />
+          </e>
+          <e p="Menu.cs" t="Include" />
+          <e p="Player" t="Include">
+            <e p="EnterThePortal.cs" t="Include" />
+            <e p="GrabObject.cs" t="Include" />
+            <e p="HitBevaviour.cs" t="Include" />
+            <e p="LookAtMouse.cs" t="Include" />
+            <e p="Platformer2DUserControl.cs" t="Include" />
+            <e p="PlatformerCharacter2D.cs" t="Include" />
+            <e p="PortalGun.cs" t="Include" />
+            <e p="TurnPlayerToMouse.cs" t="Include" />
+          </e>
+          <e p="Turrets" t="Include">
+            <e p="ITurretBehaviour.cs" t="Include" />
+            <e p="ShootingPointBehaviour.cs" t="Include" />
+            <e p="StaticTurretBehaviour.cs" t="Include" />
+          </e>
         </e>
       </e>
       <e p="Assets\SampleScenes" t="Include">
@@ -44,8 +59,6 @@
           <e p="Scripts" t="Include">
             <e p="Camera2DFollow.cs" t="Include" />
             <e p="CameraFollow.cs" t="Include" />
-            <e p="Platformer2DUserControl.cs" t="Include" />
-            <e p="PlatformerCharacter2D.cs" t="Include" />
             <e p="Restarter.cs" t="Include" />
           </e>
         </e>

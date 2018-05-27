@@ -1,37 +1,38 @@
 using UnityEngine;
 using UnityStandardAssets.CrossPlatformInput;
-using UnityStandardAssets._2D;
 
-namespace Main.Scripts
+[RequireComponent(typeof (PlatformerCharacter2D))]
+public class Platformer2DUserControl : MonoBehaviour
 {
-    [RequireComponent(typeof (PlatformerCharacter2D))]
-    public class Platformer2DUserControl : MonoBehaviour
+    private const int LeftMouseButton = 0;
+    private const int RightMouseButton = 1;
+    
+    private PlatformerCharacter2D character;
+    private PortalGun portalGun;
+    private bool isJumping;
+
+
+    private void Awake()
     {
-        private PlatformerCharacter2D m_Character;
-        private bool m_Jump;
+        character = GetComponent<PlatformerCharacter2D>();
+        portalGun = GetComponentInChildren<PortalGun>();
+    }
 
 
-        private void Awake()
+    private void Update()
+    {   
+        if (!isJumping)
         {
-            m_Character = GetComponent<PlatformerCharacter2D>();
+            isJumping = Input.GetKeyDown(KeyCode.Space);
         }
+    }
 
 
-        private void Update()
-        {
-            if (!m_Jump)
-            {
-                m_Jump = CrossPlatformInputManager.GetButtonDown("Jump");
-            }
-        }
+    private void FixedUpdate()
+    {
+        float h = CrossPlatformInputManager.GetAxis("Horizontal");
 
-
-        private void FixedUpdate()
-        {
-            float h = CrossPlatformInputManager.GetAxis("Horizontal");
-
-            m_Character.Move(h, m_Jump);
-            m_Jump = false;
-        }
+        character.Move(h, isJumping);
+        isJumping = false;
     }
 }

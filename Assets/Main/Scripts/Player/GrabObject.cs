@@ -1,5 +1,4 @@
 ﻿using System.Linq;
-using Main.Scripts;
 using UnityEngine;
 
 public class GrabObject : MonoBehaviour
