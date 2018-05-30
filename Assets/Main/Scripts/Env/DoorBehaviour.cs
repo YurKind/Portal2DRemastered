@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -14,6 +15,8 @@ public class DoorBehaviour : MonoBehaviour
     private GameObject door;
     private GameObject player;
     private AudioSource audioSource;
+
+    private const int FINAL_LEVEL = 3;
 
     public void OpenDoor()
     {
@@ -42,10 +45,19 @@ public class DoorBehaviour : MonoBehaviour
         {
             if (Input.GetKey(KeyCode.W))
             {
-                var nextLevel =
+                var currentLevel =
                     int.Parse(SceneManager.GetActiveScene().name.Split(new[] {"Level"}, StringSplitOptions.None)[1]);
+
+                if (currentLevel == FINAL_LEVEL)
+                {
+                    SceneManager.LoadScene("TheEnd");
+                    File.WriteAllText("save.txt", "TheEnd");
+                    return;
+                }
                 
-                SceneManager.LoadScene(string.Format("Level{0}", nextLevel + 1));
+                File.WriteAllText("save.txt", string.Format("Level{0}", currentLevel + 1));
+
+                SceneManager.LoadScene(string.Format("Level{0}", currentLevel + 1));
             }
         }
     }

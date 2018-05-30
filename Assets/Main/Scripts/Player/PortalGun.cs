@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.Remoting.Messaging;
+using System.Security.Policy;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -18,6 +19,7 @@ public class PortalGun : MonoBehaviour
 
     private GameObject redPortal;
     private GameObject bluePortal;
+    private GameObject[] walls;
 
     private AudioSource audioSource;
 
@@ -40,50 +42,46 @@ public class PortalGun : MonoBehaviour
     private void Awake()
     {
         audioSource = GetComponent<AudioSource>();
+        walls = GameObject.FindGameObjectsWithTag("Wall");
     }
 
-    private void Update()
+    public void SetRedPortal()
     {
-        var walls = GameObject.FindGameObjectsWithTag("Wall");
-
-        if (Input.GetMouseButtonDown(RIGHT_MOUSE_BUTTON))
+        var spawnPosition = ComputeSpawnPosition(Portal.Red);
+        if (IsPortalAbleToSet(walls, redPortal, bluePortal, spawnPosition))
         {
-            var spawnPosition = ComputeSpawnPosition(Portal.Red);
-            if (IsPortalAbleToSet(walls, redPortal, bluePortal, spawnPosition))
+            if (redPortal == null)
             {
-                if (redPortal == null)
-                {
-                    redPortal = new GameObject("RedPortal");
-                    redPortal.AddComponent<SpriteRenderer>().sprite = redPortalSprite;
-                    redPortal.GetComponent<SpriteRenderer>().sortingLayerName = "Portals";
-                    redPortal.AddComponent<CapsuleCollider2D>().isTrigger = true;
-                    redPortal.tag = "RedPortal";
-                }
-
-                audioSource.PlayOneShot(redSound);
-
-                redPortal.transform.position = spawnPosition;
+                redPortal = new GameObject("RedPortal");
+                redPortal.AddComponent<SpriteRenderer>().sprite = redPortalSprite;
+                redPortal.GetComponent<SpriteRenderer>().sortingLayerName = "Portals";
+                redPortal.AddComponent<CapsuleCollider2D>().isTrigger = true;
+                redPortal.tag = "RedPortal";
             }
+
+            audioSource.PlayOneShot(redSound);
+
+            redPortal.transform.position = spawnPosition;
         }
+    }
 
-        if (Input.GetMouseButtonDown(LEFT_MOUSE_BUTTON))
+    public void SetBluePortal()
+    {
+        var spawnPosition = ComputeSpawnPosition(Portal.Blue);
+        if (IsPortalAbleToSet(walls, bluePortal, redPortal, spawnPosition))
         {
-            var spawnPosition = ComputeSpawnPosition(Portal.Blue);
-            if (IsPortalAbleToSet(walls, bluePortal, redPortal, spawnPosition))
+            if (bluePortal == null)
             {
-                if (bluePortal == null)
-                {
-                    bluePortal = new GameObject("BluePortal");
-                    bluePortal.AddComponent<SpriteRenderer>().sprite = bluePortalSprite;
-                    bluePortal.GetComponent<SpriteRenderer>().sortingLayerName = "Portals";
-                    bluePortal.AddComponent<CapsuleCollider2D>().isTrigger = true;
-                    bluePortal.tag = "BluePortal";
-                }
-
-                audioSource.PlayOneShot(blueSound);
-
-                bluePortal.transform.position = spawnPosition;
+                bluePortal = new GameObject("BluePortal");
+                bluePortal.AddComponent<SpriteRenderer>().sprite = bluePortalSprite;
+                bluePortal.GetComponent<SpriteRenderer>().sortingLayerName = "Portals";
+                bluePortal.AddComponent<CapsuleCollider2D>().isTrigger = true;
+                bluePortal.tag = "BluePortal";
             }
+
+            audioSource.PlayOneShot(blueSound);
+
+            bluePortal.transform.position = spawnPosition;
         }
     }
 

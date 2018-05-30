@@ -25,7 +25,7 @@ public class StaticTurretBehaviour : GrabbableObject, ITurretBehaviour
     public void Update()
     {
         base.Update();
-        
+
         if (ShouldShoot())
         {
             isShooting = true;
@@ -52,22 +52,26 @@ public class StaticTurretBehaviour : GrabbableObject, ITurretBehaviour
 
     public bool ShouldShoot()
     {
-        var startPosition = startShootingPoint.transform.position;
-        var endPosition = endShootingPoint.transform.position;
+        if (!player.GetComponent<Platformer2DUserControl>().isPaused)
+        {
+            var startPosition = startShootingPoint.transform.position;
+            var endPosition = endShootingPoint.transform.position;
 
-        var playerCollider = player.GetComponent<PolygonCollider2D>();
-        var test = Physics2D.RaycastAll(startPosition, endPosition - startPosition,
-            Vector2.Distance(startPosition, endPosition));
-        var collider2Ds = Physics2D.RaycastAll(startPosition, endPosition - startPosition,
-            Vector2.Distance(startPosition, endPosition)).Select(hit => hit.collider).ToList();
-        var rayCastHits = collider2Ds;
-        var firstWallOrBulletProof = rayCastHits.FirstOrDefault(col => col.CompareTag("BulletProof") || col.CompareTag("Wall"));
+            var playerCollider = player.GetComponent<PolygonCollider2D>();
+            var collider2Ds = Physics2D.RaycastAll(startPosition, endPosition - startPosition,
+                Vector2.Distance(startPosition, endPosition)).Select(hit => hit.collider).ToList();
+            var rayCastHits = collider2Ds;
+            var firstWallOrBulletProof =
+                rayCastHits.FirstOrDefault(col => col.CompareTag("BulletProof") || col.CompareTag("Wall"));
 
-        bool playerInSight = firstWallOrBulletProof != null && rayCastHits.IndexOf(playerCollider) != -1 &&
-                             rayCastHits.IndexOf(playerCollider) < rayCastHits.IndexOf(firstWallOrBulletProof) ||
-                             firstWallOrBulletProof == null && rayCastHits.IndexOf(playerCollider) != -1;
+            var playerInSight = firstWallOrBulletProof != null && rayCastHits.IndexOf(playerCollider) != -1 &&
+                                rayCastHits.IndexOf(playerCollider) < rayCastHits.IndexOf(firstWallOrBulletProof) ||
+                                firstWallOrBulletProof == null && rayCastHits.IndexOf(playerCollider) != -1;
 
-        return playerInSight && IsGrounded();    
+            return playerInSight && IsGrounded();
+        }
+
+        return false;
     }
 
     private bool IsGrounded()

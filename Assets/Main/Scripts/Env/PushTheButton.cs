@@ -5,22 +5,17 @@ public class PushTheButton : MonoBehaviour
     public Sprite buttonOn;
     public Sprite buttonOff;
 
+    public GameObject player;
+    public GameObject cube;
+    public GameObject door;
+
     private SpriteRenderer buttonRenderer;
-
-    private GameObject player;
-    private GameObject cube;
-    private GameObject door;
-
     private Collider2D playerCollider;
     private Collider2D cubeCollider;
     private Collider2D buttonCollider;
 
     private void Start()
     {
-        player = GameObject.Find("Player");
-        cube = GameObject.Find("Cube");
-        door = GameObject.Find("Door");
-
         playerCollider = player.GetComponent<Collider2D>();
         cubeCollider = cube.GetComponent<Collider2D>();
         buttonCollider = transform.GetComponent<Collider2D>();

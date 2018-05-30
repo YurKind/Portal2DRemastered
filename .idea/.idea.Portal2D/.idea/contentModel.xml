@@ -22,11 +22,9 @@
             <e p="EnterThePortal.cs" t="Include" />
             <e p="GrabObject.cs" t="Include" />
             <e p="HitBevaviour.cs" t="Include" />
-            <e p="LookAtMouse.cs" t="Include" />
             <e p="Platformer2DUserControl.cs" t="Include" />
             <e p="PlatformerCharacter2D.cs" t="Include" />
-            <e p="SetPortal.cs" t="Include" />
-            <e p="TurnPlayerToMouse.cs" t="Include" />
+            <e p="PortalGun.cs" t="Include" />
           </e>
           <e p="Turrets" t="Include">
             <e p="ITurretBehaviour.cs" t="Include" />
