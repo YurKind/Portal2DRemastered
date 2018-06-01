@@ -3,7 +3,7 @@
 public abstract class GrabbableAndThrowableObject : MonoBehaviour, IGrabbableAndThrowable
 {
     public bool grabbed;
-    protected GameObject hold;
+    private GameObject hold;
     private Transform oldParent;
     private float oldGravityScale;
 

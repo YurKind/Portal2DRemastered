@@ -3,7 +3,6 @@ using UnityEngine;
 
 public class GrabObject : MonoBehaviour
 {
-    public bool grabbed;
     private RaycastHit2D hit;
 
     private GameObject player;

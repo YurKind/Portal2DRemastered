@@ -14,9 +14,6 @@ public class PortalGun : MonoBehaviour
         Red
     }
 
-    private const int LEFT_MOUSE_BUTTON = 0;
-    private const int RIGHT_MOUSE_BUTTON = 1;
-
     private GameObject redPortal;
     private GameObject bluePortal;
     private GameObject[] walls;
