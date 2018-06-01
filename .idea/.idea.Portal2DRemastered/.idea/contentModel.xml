@@ -26,9 +26,9 @@
             <e p="PortalGun.cs" t="Include" />
           </e>
           <e p="Turrets" t="Include">
-            <e p="ITurretBehaviour.cs" t="Include" />
-            <e p="ShootingPointBehaviour.cs" t="Include" />
-            <e p="StaticTurretBehaviour.cs" t="Include" />
+            <e p="ITurret.cs" t="Include" />
+            <e p="ShootingPoint.cs" t="Include" />
+            <e p="StaticTurret.cs" t="Include" />
           </e>
         </e>
       </e>

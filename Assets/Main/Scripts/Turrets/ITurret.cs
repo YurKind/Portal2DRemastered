@@ -1,4 +1,4 @@
-﻿public interface ITurretBehaviour : IGrabbableAndThrowable
+﻿public interface ITurret : IGrabbableAndThrowable
 {
     bool IsShooting();
     

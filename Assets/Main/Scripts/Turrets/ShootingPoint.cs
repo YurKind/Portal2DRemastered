@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class ShootingPointBehaviour : MonoBehaviour
+public class ShootingPoint : MonoBehaviour
 {
 	public Sprite shootingSprite;
 	public GameObject turret;
@@ -13,7 +13,7 @@ public class ShootingPointBehaviour : MonoBehaviour
 	
 	void Update ()
 	{
-		var isShooting = turret.GetComponent<ITurretBehaviour>().IsShooting();
+		var isShooting = turret.GetComponent<ITurret>().IsShooting();
 		if (isShooting)
 		{
 			spriteRenderer.sprite = spriteRenderer.sprite == null ? shootingSprite : null;
