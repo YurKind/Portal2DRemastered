@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class CubeSpawnerBehaviour : MonoBehaviour
+public class CubeSpawner : MonoBehaviour
 {
     public GameObject cube;
 

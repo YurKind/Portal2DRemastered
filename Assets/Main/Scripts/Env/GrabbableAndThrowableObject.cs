@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public abstract class GrabbableObject : MonoBehaviour, IGrabbableAndThrowable
+public abstract class GrabbableAndThrowableObject : MonoBehaviour, IGrabbableAndThrowable
 {
     public bool grabbed;
     protected GameObject hold;

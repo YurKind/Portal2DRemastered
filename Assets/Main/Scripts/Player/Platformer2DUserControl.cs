@@ -41,20 +41,25 @@ public class Platformer2DUserControl : MonoBehaviour
             SceneManager.LoadScene("MainMenu");   
         }
 
-        if (Input.GetMouseButtonDown(LeftMouseButton) && !isPaused)
-        {
-            portalGun.SetBluePortal();
-        }
-
-        if (Input.GetMouseButtonDown(RightMouseButton) && !isPaused)
-        {
-            portalGun.SetRedPortal();
-        }
-
         if (!isPaused)
         {
             FacePortalGunToMouse();
             LookAtMouse();
+            
+            if (Input.GetMouseButtonDown(LeftMouseButton))
+            {
+                portalGun.SetBluePortal();
+            }
+
+            if (Input.GetMouseButtonDown(RightMouseButton))
+            {
+                portalGun.SetRedPortal();
+            }
+
+            if (Input.GetKeyDown(KeyCode.W))
+            {
+                EnterThePortal();
+            }
         }
     }
 
@@ -101,5 +106,30 @@ public class Platformer2DUserControl : MonoBehaviour
         var theScale = transform.localScale;
         theScale.x *= -1;
         transform.localScale = theScale;
+    }
+
+    private void EnterThePortal()
+    {
+        var redPortal = GameObject.Find("RedPortal");
+        var bluePortal = GameObject.Find("BluePortal");
+
+        if (redPortal == null || bluePortal == null) return;
+
+        var playerX = transform.position.x;
+        var playerY = transform.position.y;
+
+        var redPortalX = redPortal.transform.position.x;
+        var redPortalY = redPortal.transform.position.y;
+        var bluePortalX = bluePortal.transform.position.x;
+        var bluePortalY = bluePortal.transform.position.y;
+
+        if (System.Math.Abs(redPortalX - playerX) <= 1 && System.Math.Abs(redPortalY - playerY) <= 1)
+        {
+            transform.position = bluePortal.transform.position;
+        }
+        else if (System.Math.Abs(bluePortalX - playerX) <= 1 && System.Math.Abs(bluePortalY - playerY) <= 1)
+        {
+            transform.position = redPortal.transform.position;
+        }
     }
 }

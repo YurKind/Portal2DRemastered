@@ -137,7 +137,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 19484222}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.5219338, y: -6.71, z: 0}
+  m_LocalPosition: {x: 3.5219338, y: -6.8, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1204389160}
@@ -468,11 +468,6 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
---- !u!1 &283673441 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1580529162155618, guid: 172844772e8be2d4cb6086fbbf1b4b88,
-    type: 2}
-  m_PrefabInternal: {fileID: 993879927}
 --- !u!1 &312177309
 GameObject:
   m_ObjectHideFlags: 0
@@ -497,7 +492,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 312177309}
   m_LocalRotation: {x: -0, y: -0, z: 0.70710677, w: -0.7071068}
-  m_LocalPosition: {x: 7.0719337, y: -3.8, z: 0}
+  m_LocalPosition: {x: 7.0719337, y: -3.9, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1204389160}
@@ -1037,8 +1032,31 @@ Prefab:
       propertyPath: failtureSound
       value: 
       objectReference: {fileID: 8300000, guid: 9485641536be03d4988f58f88cc30046, type: 3}
+<<<<<<< Updated upstream
     m_RemovedComponents:
     - {fileID: 114078142757514666, guid: 172844772e8be2d4cb6086fbbf1b4b88, type: 2}
+=======
+    - target: {fileID: 4744575172261426, guid: 172844772e8be2d4cb6086fbbf1b4b88, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 8.55
+      objectReference: {fileID: 0}
+    - target: {fileID: 4744575172261426, guid: 172844772e8be2d4cb6086fbbf1b4b88, type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4744575172261426, guid: 172844772e8be2d4cb6086fbbf1b4b88, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -2.08
+      objectReference: {fileID: 0}
+    - target: {fileID: 114987438319429842, guid: 172844772e8be2d4cb6086fbbf1b4b88,
+        type: 2}
+      propertyPath: health
+      value: 
+      objectReference: {fileID: 1144362944}
+    m_RemovedComponents:
+    - {fileID: 114078142757514666, guid: 172844772e8be2d4cb6086fbbf1b4b88, type: 2}
+    - {fileID: 114958119133922286, guid: 172844772e8be2d4cb6086fbbf1b4b88, type: 2}
+>>>>>>> Stashed changes
     - {fileID: 114271110271952216, guid: 172844772e8be2d4cb6086fbbf1b4b88, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 172844772e8be2d4cb6086fbbf1b4b88, type: 2}
   m_IsPrefabParent: 0
@@ -1190,7 +1208,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4389831188513654, guid: 9c06a78b1c21cb34eb3106bc79485032, type: 2}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4933969507758316, guid: 9c06a78b1c21cb34eb3106bc79485032, type: 2}
       propertyPath: m_LocalPosition.x
@@ -1255,12 +1273,17 @@ Prefab:
         type: 2}
       propertyPath: player
       value: 
-      objectReference: {fileID: 283673441}
+      objectReference: {fileID: 1328645307}
     - target: {fileID: 114190714545103558, guid: 9c06a78b1c21cb34eb3106bc79485032,
         type: 2}
       propertyPath: door
       value: 
       objectReference: {fileID: 708105177}
+    - target: {fileID: 60240704296232220, guid: 9c06a78b1c21cb34eb3106bc79485032,
+        type: 2}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 2ae3752a1527d784690db9787922f4d4, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9c06a78b1c21cb34eb3106bc79485032, type: 2}
   m_IsPrefabParent: 0
@@ -1368,6 +1391,11 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!1 &1328645307 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1767464631938248, guid: 172844772e8be2d4cb6086fbbf1b4b88,
+    type: 2}
+  m_PrefabInternal: {fileID: 993879927}
 --- !u!1 &1344707821
 GameObject:
   m_ObjectHideFlags: 0
@@ -1547,7 +1575,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 1390547888}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 51ae4637df27e9c4bac7d99053f1d383, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0

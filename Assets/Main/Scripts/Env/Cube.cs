@@ -1,7 +1,7 @@
 ﻿using System.Linq;
 using UnityEngine;
 
-public class CubeBehaviour : GrabbableObject
+public class Cube : GrabbableAndThrowableObject
 {
 	public AudioClip collisionSound;
 	

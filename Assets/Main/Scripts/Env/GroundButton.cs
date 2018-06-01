@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class PushTheButton : MonoBehaviour
+public class GroundButton : MonoBehaviour
 {
     public Sprite buttonOn;
     public Sprite buttonOff;
@@ -32,7 +32,7 @@ public class PushTheButton : MonoBehaviour
 
     private void Update()
     {
-        var doorBehaviour = door.GetComponent<DoorBehaviour>();
+        var doorBehaviour = door.GetComponent<Door>();
         if (buttonCollider.IsTouching(playerCollider) || buttonCollider.IsTouching(cubeCollider))
         {
             buttonRenderer.sprite = buttonOn;

@@ -47,7 +47,7 @@ public class PlatformerCharacter2D : MonoBehaviour
 
     private bool JumpAllowed()
     {
-        var grabbableObject = GetComponentInChildren<GrabbableObject>();
+        var grabbableObject = GetComponentInChildren<GrabbableAndThrowableObject>();
         if (grabbableObject)
         {
             var isTouching = GetComponent<Collider2D>().IsTouching(grabbableObject.GetComponent<Collider2D>());

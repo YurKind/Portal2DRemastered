@@ -186,7 +186,7 @@ Prefab:
         type: 2}
       propertyPath: holdPoint
       value: 
-      objectReference: {fileID: 1733689958}
+      objectReference: {fileID: 0}
     - target: {fileID: 114306879235932456, guid: 172844772e8be2d4cb6086fbbf1b4b88,
         type: 2}
       propertyPath: failtureSound
@@ -206,6 +206,15 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4744575172261426, guid: 172844772e8be2d4cb6086fbbf1b4b88, type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114987438319429842, guid: 172844772e8be2d4cb6086fbbf1b4b88,
+        type: 2}
+      propertyPath: health
+      value: 
+      objectReference: {fileID: 560308187}
     m_RemovedComponents:
     - {fileID: 114655146418033430, guid: 172844772e8be2d4cb6086fbbf1b4b88, type: 2}
     - {fileID: 114078142757514666, guid: 172844772e8be2d4cb6086fbbf1b4b88, type: 2}
@@ -297,11 +306,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9090739aba5a7c14db762ab7857e6a43, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &373465470 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1580529162155618, guid: 172844772e8be2d4cb6086fbbf1b4b88,
-    type: 2}
-  m_PrefabInternal: {fileID: 36312925}
 --- !u!1001 &515845528
 Prefab:
   m_ObjectHideFlags: 0
@@ -360,6 +364,11 @@ Transform:
   m_PrefabParentObject: {fileID: 4356905488595324, guid: 104025ce6e78f3e43b6a60f19b3bb81c,
     type: 2}
   m_PrefabInternal: {fileID: 870762519}
+--- !u!1 &647727109 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1767464631938248, guid: 172844772e8be2d4cb6086fbbf1b4b88,
+    type: 2}
+  m_PrefabInternal: {fileID: 36312925}
 --- !u!1 &648917513
 GameObject:
   m_ObjectHideFlags: 0
@@ -505,7 +514,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4952243775579962, guid: 50e00683b4699cd44a02599896c1c1a6, type: 2}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 114871404579292276, guid: 50e00683b4699cd44a02599896c1c1a6,
         type: 2}
@@ -783,7 +792,7 @@ Prefab:
         type: 2}
       propertyPath: hold
       value: 
-      objectReference: {fileID: 1733689958}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 029043c3b0fc0214b8779f8eafd76c17, type: 2}
   m_IsPrefabParent: 0
@@ -1742,7 +1751,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buttonOn: {fileID: 21300000, guid: bffff6382294a9641aa8b2c46bfcdd99, type: 3}
   buttonOff: {fileID: 21300000, guid: c2419711e7e66db4a99ee1fc955b5c38, type: 3}
-  player: {fileID: 373465470}
+  player: {fileID: 647727109}
   cube: {fileID: 1245329233}
   door: {fileID: 712840412}
 --- !u!212 &1703054152
@@ -1790,11 +1799,6 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
---- !u!1 &1733689958 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1740085535925308, guid: 172844772e8be2d4cb6086fbbf1b4b88,
-    type: 2}
-  m_PrefabInternal: {fileID: 36312925}
 --- !u!1001 &1776522188
 Prefab:
   m_ObjectHideFlags: 0

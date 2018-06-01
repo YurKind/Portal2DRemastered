@@ -2,7 +2,7 @@
 using System.Linq;
 using UnityEngine;
 
-public class StaticTurretBehaviour : GrabbableObject, ITurretBehaviour
+public class StaticTurretBehaviour : GrabbableAndThrowableObject, ITurretBehaviour
 {
     public GameObject startShootingPoint;
     public GameObject endShootingPoint;

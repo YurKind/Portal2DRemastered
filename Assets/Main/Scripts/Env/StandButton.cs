@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class StandButtonBehaviour : MonoBehaviour
+public class StandButton : MonoBehaviour
 {
     public GameObject cubeSpawner;
     public AudioClip touchSound;
@@ -22,7 +22,7 @@ public class StandButtonBehaviour : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.E) && Vector2.Distance(player.transform.position, transform.position) < distance)
         {
             audioSource.PlayOneShot(touchSound);
-            cubeSpawner.GetComponent<CubeSpawnerBehaviour>().SpawnCube();
+            cubeSpawner.GetComponent<CubeSpawner>().SpawnCube();
         }
     }
 }

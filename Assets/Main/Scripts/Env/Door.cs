@@ -3,7 +3,7 @@ using System.IO;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class DoorBehaviour : MonoBehaviour
+public class Door : MonoBehaviour
 {
     public bool isOpened;
     public Sprite openedDoor;
