@@ -364,11 +364,6 @@ Transform:
   m_PrefabParentObject: {fileID: 4356905488595324, guid: 104025ce6e78f3e43b6a60f19b3bb81c,
     type: 2}
   m_PrefabInternal: {fileID: 870762519}
---- !u!1 &647727109 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1767464631938248, guid: 172844772e8be2d4cb6086fbbf1b4b88,
-    type: 2}
-  m_PrefabInternal: {fileID: 36312925}
 --- !u!1 &648917513
 GameObject:
   m_ObjectHideFlags: 0
@@ -1467,6 +1462,11 @@ Transform:
   m_PrefabParentObject: {fileID: 4525561468432430, guid: a707d617cb2def74883daefe26481054,
     type: 2}
   m_PrefabInternal: {fileID: 1005854192}
+--- !u!1 &1558002373 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1767464631938248, guid: 172844772e8be2d4cb6086fbbf1b4b88,
+    type: 2}
+  m_PrefabInternal: {fileID: 36312925}
 --- !u!1 &1590143341
 GameObject:
   m_ObjectHideFlags: 0
@@ -1751,7 +1751,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buttonOn: {fileID: 21300000, guid: bffff6382294a9641aa8b2c46bfcdd99, type: 3}
   buttonOff: {fileID: 21300000, guid: c2419711e7e66db4a99ee1fc955b5c38, type: 3}
-  player: {fileID: 647727109}
+  player: {fileID: 1558002373}
   cube: {fileID: 1245329233}
   door: {fileID: 712840412}
 --- !u!212 &1703054152
