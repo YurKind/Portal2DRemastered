@@ -15,14 +15,6 @@ public class StandButton : MonoBehaviour, ICanBeUsed
         player = GameObject.Find("Player");
     }
 
-    void Update()
-    {
-//        if (Input.GetKeyDown(KeyCode.E) && Vector2.Distance(player.transform.position, transform.position) < distance)
-//        {
-//            Use();
-//        }
-    }
-
     public void Use()
     {
         audioSource.PlayOneShot(touchSound);

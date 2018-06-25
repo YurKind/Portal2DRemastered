@@ -26,10 +26,10 @@ public class StaticTurret : GrabbableAndThrowableObject, ITurret
     {
         base.Update();
 
-        if (ShouldShoot())
+        if (ShouldAttack())
         {
             isShooting = true;
-            Shoot();
+            Attack();
         }
         else
         {
@@ -44,13 +44,13 @@ public class StaticTurret : GrabbableAndThrowableObject, ITurret
         return isShooting;
     }
 
-    public void Shoot()
+    public void Attack()
     {
         player.GetComponent<HitBevaviour>().MakeHit(turretDamage, gameObject);
         if (!audioSource.isPlaying) audioSource.PlayOneShot(shootingSound);
     }
 
-    public bool ShouldShoot()
+    public bool ShouldAttack()
     {
         if (!player.GetComponent<Platformer2DUserControl>().isPaused)
         {
