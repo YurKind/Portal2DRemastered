@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class StandButton : MonoBehaviour
+public class StandButton : MonoBehaviour, ICanBeUsed
 {
     public GameObject cubeSpawner;
     public AudioClip touchSound;
@@ -17,10 +17,15 @@ public class StandButton : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E) && Vector2.Distance(player.transform.position, transform.position) < distance)
-        {
-            audioSource.PlayOneShot(touchSound);
-            cubeSpawner.GetComponent<CubeSpawner>().SpawnCube();
-        }
+//        if (Input.GetKeyDown(KeyCode.E) && Vector2.Distance(player.transform.position, transform.position) < distance)
+//        {
+//            Use();
+//        }
+    }
+
+    public void Use()
+    {
+        audioSource.PlayOneShot(touchSound);
+        cubeSpawner.GetComponent<CubeSpawner>().SpawnCube();
     }
 }

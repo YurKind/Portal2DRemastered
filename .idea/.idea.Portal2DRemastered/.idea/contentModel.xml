@@ -14,12 +14,12 @@
             <e p="Door.cs" t="Include" />
             <e p="GrabbableAndThrowableObject.cs" t="Include" />
             <e p="GroundButton.cs" t="Include" />
+            <e p="ICanBeUsed.cs" t="Include" />
             <e p="IGrabbableAndThrowable.cs" t="Include" />
             <e p="StandButton.cs" t="Include" />
           </e>
           <e p="Menu.cs" t="Include" />
           <e p="Player" t="Include">
-            <e p="GrabObject.cs" t="Include" />
             <e p="HitBevaviour.cs" t="Include" />
             <e p="Platformer2DUserControl.cs" t="Include" />
             <e p="PlatformerCharacter2D.cs" t="Include" />

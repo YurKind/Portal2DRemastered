@@ -1,12 +1,13 @@
+using System.Linq;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityStandardAssets.CrossPlatformInput;
 
-[RequireComponent(typeof (PlatformerCharacter2D))]
+[RequireComponent(typeof(PlatformerCharacter2D))]
 public class Platformer2DUserControl : MonoBehaviour
 {
     public bool isPaused;
-    
+
     private const int LeftMouseButton = 0;
     private const int RightMouseButton = 1;
 
@@ -14,17 +15,20 @@ public class Platformer2DUserControl : MonoBehaviour
     private PortalGun portalGun;
     private bool isJumping;
     private bool facingRight = true;
+    private GameObject grabbedObject;
+    private GameObject holdPoint;
 
 
     private void Awake()
     {
         character = GetComponent<PlatformerCharacter2D>();
+        holdPoint = GameObject.Find("HoldPoint");
         portalGun = GetComponentInChildren<PortalGun>();
     }
 
 
     private void Update()
-    {   
+    {
         if (!isJumping)
         {
             isJumping = Input.GetKeyDown(KeyCode.Space);
@@ -36,16 +40,22 @@ public class Platformer2DUserControl : MonoBehaviour
             isPaused = !isPaused;
         }
 
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            TryToGrabOrThrowObject();
+            TryToUseObject();
+        }
+
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            SceneManager.LoadScene("MainMenu");   
+            SceneManager.LoadScene("MainMenu");
         }
 
         if (!isPaused)
         {
             FacePortalGunToMouse();
             LookAtMouse();
-            
+
             if (Input.GetMouseButtonDown(LeftMouseButton))
             {
                 portalGun.SetBluePortal();
@@ -63,6 +73,43 @@ public class Platformer2DUserControl : MonoBehaviour
         }
     }
 
+    private void TryToUseObject()
+    {
+        var collsNearPlayer = Physics2D.OverlapCircleAll(transform.position, 1f);
+        var usableCollider = collsNearPlayer.FirstOrDefault(col =>
+            col.gameObject.GetComponent<ICanBeUsed>() != null
+        );
+
+        if (usableCollider == null)
+        {
+            return;
+        }
+        usableCollider.gameObject.GetComponent<ICanBeUsed>().Use();
+    }
+
+    private void TryToGrabOrThrowObject()
+    {
+        if (grabbedObject != null)
+        {
+            grabbedObject.GetComponent<IGrabbableAndThrowable>().Throw(transform.GetComponent<Rigidbody2D>().velocity);
+            grabbedObject = null;
+        }
+        else
+        {
+            var grabbableCollider = Physics2D.OverlapCircleAll(holdPoint.transform.position, 1f).FirstOrDefault(col =>
+                col.gameObject.GetComponent<IGrabbableAndThrowable>() != null
+            );
+
+            if (grabbableCollider == null)
+            {
+                return;
+            }
+
+            grabbedObject = grabbableCollider.gameObject;
+            grabbedObject.GetComponent<IGrabbableAndThrowable>().Grab(holdPoint);
+        }
+    }
+
 
     private void FixedUpdate()
     {
@@ -71,7 +118,7 @@ public class Platformer2DUserControl : MonoBehaviour
         character.Move(h, isJumping);
         isJumping = false;
     }
-    
+
     private void FacePortalGunToMouse()
     {
         var mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
@@ -93,12 +140,13 @@ public class Platformer2DUserControl : MonoBehaviour
         {
             Flip();
         }
+
         if (!facingRight && transform.position.x < mousePosition.x)
         {
             Flip();
         }
     }
-    
+
     private void Flip()
     {
         facingRight = !facingRight;
