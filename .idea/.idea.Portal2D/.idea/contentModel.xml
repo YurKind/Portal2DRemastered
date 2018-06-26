@@ -11,8 +11,8 @@
           <e p="Enemies" t="Include">
             <e p="IEnemy.cs" t="Include" />
             <e p="ITurret.cs" t="Include" />
-            <e p="Round.cs" t="Include" />
             <e p="ShootingPoint.cs" t="Include" />
+            <e p="Sphere.cs" t="Include" />
             <e p="StaticTurret.cs" t="Include" />
           </e>
           <e p="Env" t="Include">
