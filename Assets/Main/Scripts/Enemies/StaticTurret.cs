@@ -26,15 +26,7 @@ public class StaticTurret : GrabbableAndThrowableObject, ITurret
     {
         base.Update();
 
-        if (ShouldAttack())
-        {
-            isShooting = true;
-            Attack();
-        }
-        else
-        {
-            isShooting = false;
-        }
+        isShooting = ShouldAttack();
 
         laser.GetComponent<SpriteRenderer>().sprite = IsGrounded() ? laserSprite : null;
     }

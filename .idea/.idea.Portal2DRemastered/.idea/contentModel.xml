@@ -8,6 +8,14 @@
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets\Main" t="Include">
         <e p="Scripts" t="Include">
+          <e p="Enemies" t="Include">
+            <e p="AIController.cs" t="Include" />
+            <e p="IEnemy.cs" t="Include" />
+            <e p="ITurret.cs" t="Include" />
+            <e p="ShootingPoint.cs" t="Include" />
+            <e p="Sphere.cs" t="Include" />
+            <e p="StaticTurret.cs" t="Include" />
+          </e>
           <e p="Env" t="Include">
             <e p="Cube.cs" t="Include" />
             <e p="CubeSpawner.cs" t="Include" />
@@ -24,11 +32,6 @@
             <e p="Platformer2DUserControl.cs" t="Include" />
             <e p="PlatformerCharacter2D.cs" t="Include" />
             <e p="PortalGun.cs" t="Include" />
-          </e>
-          <e p="Turrets" t="Include">
-            <e p="ITurret.cs" t="Include" />
-            <e p="ShootingPoint.cs" t="Include" />
-            <e p="StaticTurret.cs" t="Include" />
           </e>
         </e>
       </e>

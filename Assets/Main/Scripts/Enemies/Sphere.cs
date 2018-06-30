@@ -63,11 +63,6 @@ public class Sphere : GrabbableAndThrowableObject, IEnemy
                         : currentAngularVelocity - ROTATION_VELOCITY;
             }
         }
-
-        if (ShouldAttack())
-        {
-            Attack();
-        }
     }
 
     public bool ShouldAttack()

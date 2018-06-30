@@ -421,6 +421,48 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &756844444
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4567897365151774, guid: 88233cc0e568b8a4291fd1d1558e078d, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -100
+      objectReference: {fileID: 0}
+    - target: {fileID: 4567897365151774, guid: 88233cc0e568b8a4291fd1d1558e078d, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -100
+      objectReference: {fileID: 0}
+    - target: {fileID: 4567897365151774, guid: 88233cc0e568b8a4291fd1d1558e078d, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4567897365151774, guid: 88233cc0e568b8a4291fd1d1558e078d, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4567897365151774, guid: 88233cc0e568b8a4291fd1d1558e078d, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4567897365151774, guid: 88233cc0e568b8a4291fd1d1558e078d, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4567897365151774, guid: 88233cc0e568b8a4291fd1d1558e078d, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4567897365151774, guid: 88233cc0e568b8a4291fd1d1558e078d, type: 2}
+      propertyPath: m_RootOrder
+      value: 8
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 88233cc0e568b8a4291fd1d1558e078d, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &938804132 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1767464631938248, guid: 172844772e8be2d4cb6086fbbf1b4b88,
@@ -641,6 +683,7 @@ Prefab:
     m_RemovedComponents:
     - {fileID: 114078142757514666, guid: 172844772e8be2d4cb6086fbbf1b4b88, type: 2}
     - {fileID: 114271110271952216, guid: 172844772e8be2d4cb6086fbbf1b4b88, type: 2}
+    - {fileID: 114722739601754028, guid: 172844772e8be2d4cb6086fbbf1b4b88, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 172844772e8be2d4cb6086fbbf1b4b88, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &1884650939 stripped
